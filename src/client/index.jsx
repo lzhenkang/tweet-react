@@ -68,13 +68,13 @@ var allTweet = tweets.tweets;
 class App extends React.Component {
   render() {
         let mapAllTweets = allTweet.map(tweet => {
-            return <ul>
-                        <li>Tweet: <Text text = {tweet.text}/></li>
-                        <li>Date: <Created created_at = {tweet.created_at}/></li>
-                        <li>Retweets: <Retweet retweet_count = {tweet.retweet_count}/></li>
-                        <li>Favorites: <Favorite favorite_count = {tweet.favorite_count}/></li>
-                        <li>User: <User user = {tweet.user}/></li>
-                   </ul>
+            return <div class = "tweetContainer">
+                        <div class="username">@<User user = {tweet.user}/></div>
+                        <div class="tweet">Tweet: <Text text = {tweet.text}/></div>
+                        <div class="date">Date: <Created created_at = {tweet.created_at}/></div>
+                        <div class="retweets">Retweets: <Retweet retweet_count = {tweet.retweet_count}/></div>
+                        <div class="favourites">Favorites: <Favorite favorite_count = {tweet.favorite_count}/></div>
+                   </div>
         })
     return (
       <div>
@@ -90,7 +90,7 @@ const element = document.getElementById('app');
 ReactDOM.render(<App />, element );//
 
 console.log("tweet react");
-    console.log(tweets.tweets[1].user.screen_name)
+    // console.log(tweets.tweets[1].user.screen_name)
     // console.log(tweets.tweets[1].created_at)
     // console.log(tweets.tweets[1].text)
     // console.log(tweets.tweets[1].retweet_count)

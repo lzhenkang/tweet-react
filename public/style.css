@@ -1,0 +1,23 @@
+.container{
+	background-color: white;
+	border: 1px solid;
+	width: 50%;
+	margin: 0 auto;
+
+}
+.tweetContainer{
+	background-color: white;
+	width: 75%;
+	margin: 10 auto;
+	border-bottom: 1px solid;
+	border-color: black;
+}
+.header{
+	text-align: center;
+}
+.date{
+	float: right;
+}
+.retweets, .favourites{
+	display: inline-block;
+}
