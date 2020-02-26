@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import tweets from 'tweets.js'
+import ScreenNames from 'screenname.jsx'
+// import User from 'user.jsx'
 
-import tweets from 'tweets'
-
-class ScreenNames extends React.Component {
-  render() {
-    return(
-      <div>
-        {this.props.screen_name}
-      </div>
-    );
-  }
-}
+// class ScreenNames extends React.Component {
+//   render() {
+//     return(
+//       <div>
+//         {this.props.screen_name}
+//       </div>
+//     );
+//   }
+// }
 
 class User extends React.Component {
   render() {
@@ -69,7 +70,7 @@ class App extends React.Component {
   render() {
         let mapAllTweets = allTweet.map(tweet => {
             return <div class = "tweetContainer">
-                        <div class="username">@<User user = {tweet.user}/></div>
+                        <div class="username"><User user = {tweet.user}/></div>
                         <div class="tweet">Tweet: <Text text = {tweet.text}/></div>
                         <div class="date">Date: <Created created_at = {tweet.created_at}/></div>
                         <div class="retweets">Retweets: <Retweet retweet_count = {tweet.retweet_count}/></div>
