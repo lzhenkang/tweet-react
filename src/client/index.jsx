@@ -3,6 +3,29 @@ import ReactDOM from 'react-dom';
 
 import tweets from 'tweets'
 
+class Screennames extends React.Component {
+  render() {
+    return(
+      <div>
+        {this.props.screen_name}
+      </div>
+    );
+  }
+}
+
+class User extends React.Component {
+  render() {
+        let allScreenName = this.props.user.map(screenName => {
+            return <ScreenNames screen_name = {screenName.screen_name}/>
+        })
+    return(
+      <div>
+      {allScreenName}
+      </div>
+    );
+  }
+}
+
 class Favorite extends React.Component {
   render() {
     return(
@@ -53,6 +76,7 @@ class App extends React.Component {
                         <li>Date: <Created created_at = {tweet.created_at}/></li>
                         <li>Retweets: <Retweet retweet_count = {tweet.retweet_count}/></li>
                         <li>Favorites: <Favorite favorite_count = {tweet.favorite_count}/></li>
+                        <li>User: <User user = {tweet.user}/></li>
                    </ul>
         })
     return (
