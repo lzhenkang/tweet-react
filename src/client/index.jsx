@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import tweets from 'tweets'
 
-class Screennames extends React.Component {
+class ScreenNames extends React.Component {
   render() {
     return(
       <div>
@@ -15,12 +15,9 @@ class Screennames extends React.Component {
 
 class User extends React.Component {
   render() {
-        let allScreenName = this.props.user.map(screenName => {
-            return <ScreenNames screen_name = {screenName.screen_name}/>
-        })
     return(
       <div>
-      {allScreenName}
+      <ScreenNames screen_name = {this.props.user.screen_name}/>
       </div>
     );
   }
