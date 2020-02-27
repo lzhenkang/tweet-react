@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import tweets from 'tweets.js'
-import ScreenNames from 'screenname.jsx'
-// import User from 'user.jsx'
+// import ScreenNames from 'screenname.jsx'
+import User from 'user.jsx'
 
 // class ScreenNames extends React.Component {
 //   render() {
@@ -14,15 +14,15 @@ import ScreenNames from 'screenname.jsx'
 //   }
 // }
 
-class User extends React.Component {
-  render() {
-    return(
-      <div>
-      <ScreenNames screen_name = {this.props.user.screen_name}/>
-      </div>
-    );
-  }
-}
+// class User extends React.Component {
+//   render() {
+//     return(
+//       <div>
+//       <ScreenNames screen_name = {this.props.user.screen_name}/>
+//       </div>
+//     );
+//   }
+// }
 
 class Favorite extends React.Component {
   render() {
